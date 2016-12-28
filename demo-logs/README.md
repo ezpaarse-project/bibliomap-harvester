@@ -1,1 +1,1 @@
-Anonimized logs coming from bibcnrs used for bibliomap demo.
+Anonymized logs coming from bibcnrs used for bibliomap demo.
