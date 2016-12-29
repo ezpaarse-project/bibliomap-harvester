@@ -1,3 +1,6 @@
+.log.io/log_server.conf
+.log.io/web_server.conf
+        
 .ackrc
 public/dist/*
 .DS_Store

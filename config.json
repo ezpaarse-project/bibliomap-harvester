@@ -1,0 +1,11 @@
+{
+  "nodeName": "bibliomap",
+  "logStreams": {
+    "in2p3":      [ "./tmp/in2p3.log" ],
+    "inc":        [ "./tmp/inc.log" ]
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 27777
+  }
+}
