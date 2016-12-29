@@ -5,7 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node index.js",
+    "start": "npm-run-all --parallel demo-logs-injector log.io-harvester",
+    "log.io-harvester": "HOME=$(pwd) ./node_modules/.bin/log.io-harvester",
+    "demo-logs-injector": "./demo-logs-injector.sh",
     "insertversion": "sed -i \"s#\\(image: ezpaarseproject/ezpaarse2log.io-harvester:\\)\\([\\.a-z0-9]\\+\\)#\\1${npm_package_version}#g\" docker-compose.yml",
     "version": "npm run insertversion && git add public/index.html docker-compose.yml",
     "postversion": "git push && git push --tags"
@@ -18,7 +20,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "log.io": "^0.3.4"
+    "log.io": "^0.3.4",
+    "npm-run-all": "^3.1.2"
   },
   "devDependencies": {}
 }
