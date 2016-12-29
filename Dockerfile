@@ -18,6 +18,7 @@ RUN yarn install && yarn cache clean
 # copy the code source
 # after dependencies installation
 COPY . /app
+RUN mkdir -p /app/tmp
 
 # ezmasterification of ezpaarse2log.io-harvester
 # see https://github.com/Inist-CNRS/ezmaster
