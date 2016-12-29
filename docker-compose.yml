@@ -4,7 +4,7 @@ services:
 
   ezpaarse2log.io-harvester:
     container_name: ezpaarse2log.io-harvester
-    image: ezpaarseproject/ezpaarse2log.io-harvester:1.1.0
+    image: ezpaarseproject/ezpaarse2log.io-harvester:1.2.0
     environment:
       http_proxy:  ${http_proxy}
       https_proxy: ${https_proxy}
