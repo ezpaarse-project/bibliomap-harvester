@@ -1,0 +1,24 @@
+{
+  "name": "ezpaarse2log.io-harvester",
+  "version": "1.0.0",
+  "description": "Script monitoring ezproxy log files and sending it to ezpaarse2log.io before being displayed into bibliomap",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "insertversion": "sed -i \"s#\\(image: ezpaarseproject/ezpaarse2log.io-harvester:\\)\\([\\.a-z0-9]\\+\\)#\\1${npm_package_version}#g\" docker-compose.yml",
+    "version": "npm run insertversion && git add public/index.html docker-compose.yml",
+    "postversion": "git push && git push --tags"
+  },
+  "contributors": [
+    {
+      "name": "Stéphane Gully",
+      "url": "https://github.com/kerphi"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
