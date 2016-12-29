@@ -1,6 +1,6 @@
 {
   "name": "ezpaarse2log.io-harvester",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Script monitoring ezproxy log files and sending it to ezpaarse2log.io before being displayed into bibliomap",
   "main": "index.js",
   "private": true,
