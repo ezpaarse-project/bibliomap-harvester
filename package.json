@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "npm-run-all --parallel demo-logs-injector log.io-harvester",
+    "start": "npm run log.io-harvester",
+    "start-demo": "npm-run-all --parallel demo-logs-injector log.io-harvester",
     "log.io-harvester": "HOME=$(pwd) ./node_modules/.bin/log.io-harvester",
     "demo-logs-injector": "./demo-logs-injector.sh",
     "insertversion": "sed -i \"s#\\(image: ezpaarseproject/bibliomap-harvester:\\)\\([\\.a-z0-9]\\+\\)#\\1${npm_package_version}#g\" docker-compose.yml",

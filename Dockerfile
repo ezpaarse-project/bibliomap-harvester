@@ -30,4 +30,4 @@ RUN echo '{ \
 }' > /etc/ezmaster.json
 
 # run the application
-CMD ["npm", "start"]
+ENTRYPOINT [ "./docker-entrypoint.njs" ]

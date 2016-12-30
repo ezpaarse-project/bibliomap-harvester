@@ -20,7 +20,11 @@ As a standalone script, bibliomap-harvester is not very usefull. Please have a l
 
 Env variable can be used to customize it:
 
-  * BBH_...TODO...
+  * BBH_NO_DEMO
+  * BBH_ENRICHER_HOST
+  * BBH_ENRICHER_PORT
+  * BBH_STREAMNAMES
+  * BBH_STREAMPATHS
 
 Look at [config.json](hhttps://github.com/ezpaarse-project/bibliomap-harvester/blob/master/config.json) to see the default values.
 
