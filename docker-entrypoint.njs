@@ -19,7 +19,7 @@ if (process.env.BBH_STREAMNAMES && process.env.BBH_STREAMPATHS) {
     config.logStreams[streamName] = [ bbhStreamPaths[idX] ];
   });
 }
-
+const fs = require('fs');
 fs.writeFileSync(__dirname + '/config.json', JSON.stringify(config, null, '  '));
 
 // run the harvester and the fake logs demo
