@@ -19,15 +19,15 @@ install: ## install depedencies thanks to a dockerized npm install
 	@docker run -it --rm -v $$(pwd):/app -w /app --net=host -e NODE_ENV -e http_proxy -e https_proxy node:6.9.1 npm install
 	@make chown
 
-build: ## build the docker ezpaarseproject/ezpaarse2log.io-harvester image localy
-	@docker build -t ezpaarseproject/ezpaarse2log.io-harvester --build-arg http_proxy --build-arg https_proxy .
+build: ## build the docker ezpaarseproject/bibliomap-harvester image localy
+	@docker build -t ezpaarseproject/bibliomap-harvester --build-arg http_proxy --build-arg https_proxy .
 
-run-debug: ## run ezpaarse2log.io-harvester in debug mode with docker
+run-debug: ## run bibliomap-harvester in debug mode with docker
 	@docker-compose -f ./docker-compose.debug.yml up -d
-	@# attach to the ezpaarse2log.io-harvester container in order to be able to stop it easily with CTRL+C
-	@docker attach ezpaarse2log.io-harvester
+	@# attach to the bibliomap-harvester container in order to be able to stop it easily with CTRL+C
+	@docker attach bibliomap-harvester
 
-run-prod: ## run ezpaarse2log.io-harvester in production mode with the full dockerized image (see build)
+run-prod: ## run bibliomap-harvester in production mode with the full dockerized image (see build)
 	@docker-compose -f ./docker-compose.yml up -d
 
 # makefile rule used to keep current user's unix rights on the docker mounted files

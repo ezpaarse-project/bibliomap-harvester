@@ -20,7 +20,7 @@ RUN yarn install && yarn cache clean
 COPY . /app
 RUN mkdir -p /app/tmp
 
-# ezmasterification of ezpaarse2log.io-harvester
+# ezmasterification
 # see https://github.com/Inist-CNRS/ezmaster
 # (no data directory)
 # http port is not used

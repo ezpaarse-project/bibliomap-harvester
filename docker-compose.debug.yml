@@ -2,9 +2,9 @@ version: '2'
 
 services:
 
-  ezpaarse2log.io-harvester:
-    container_name: ezpaarse2log.io-harvester
-    image: ezpaarseproject/ezpaarse2log.io-harvester:latest
+  bibliomap-harvester:
+    container_name: bibliomap-harvester
+    image: node:6.9.1
     volumes:
       - .:/app
     working_dir: /app
