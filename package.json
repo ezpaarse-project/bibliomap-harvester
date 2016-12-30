@@ -1,6 +1,6 @@
 {
   "name": "bibliomap-harvester",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Monitors and harvests ezproxy log files for bibliomap visualization.",
   "main": "index.js",
   "private": true,
