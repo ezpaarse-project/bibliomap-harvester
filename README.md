@@ -26,7 +26,7 @@ Env variable can be used to customize it:
   * BBH_STREAMNAMES
   * BBH_STREAMPATHS
 
-Look at [config.json](hhttps://github.com/ezpaarse-project/bibliomap-harvester/blob/master/config.json) to see the default values.
+Look at [config.json](https://github.com/ezpaarse-project/bibliomap-harvester/blob/master/config.json) to see the default values.
 
 ## Developement
 
