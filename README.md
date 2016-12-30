@@ -28,6 +28,17 @@ Env variable can be used to customize it:
 
 Look at [config.json](https://github.com/ezpaarse-project/bibliomap-harvester/blob/master/config.json) to see the default values.
 
+To connect external log files, you have to mount docker volumes this way.
+  * Supposing you have 2 ezproxy log file here on the hosting server:
+    * /bibcnrs/inp/ezproxy/ezproxy.log
+    * /bibcnrs/insb/ezproxy/ezproxy.log
+  * Then you have to add these volumes when running bibliomap-harvester container:
+    * ``-v  /bibcnrs/inp/ezproxy/ezproxy.log:/app/tmp/inc.log``
+    * ``-v  /bibcnrs/insb/ezproxy/ezproxy.log:/app/tmp/insb.log``
+  * Then when running bibliomap-harvester container, you have to setup theses variables:
+    * BBH_STREAMNAMES="INC INSB"
+    * BBH_STREAMPATHS="/app/tmp/inc.log /app/tmp/insb.log"
+
 ## Developement
 
 ```
