@@ -38,6 +38,7 @@ To connect external log files, you have to mount docker volumes this way.
   * Then when running bibliomap-harvester container, you have to setup theses variables:
     * BBH_STREAMNAMES="INC INSB"
     * BBH_STREAMPATHS="/app/tmp/inc.log /app/tmp/insb.log"
+    * BBH_NO_DEMO="1"
 
 ## Developement
 
