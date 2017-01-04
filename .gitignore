@@ -1,5 +1,6 @@
 .log.io/log_server.conf
 .log.io/web_server.conf
+config.local.json
         
 .ackrc
 public/dist/*

@@ -21,4 +21,4 @@ services:
       BBH_STREAMPATHS: ${BBH_STREAMPATHS}
     tty: true         # to have nice debug(...) outputs
     stdin_open: true  # to be able to use CTRL+C to stop the debug
-    command: npm start
+    entrypoint: ./docker-entrypoint.njs
