@@ -1,16 +1,16 @@
 {
   "nodeName": "bibliomap",
   "logStreams": {
-    "IN2P3": [ "./tmp/in2p3.log" ],
-    "INC":   [ "./tmp/inc.log" ],
-    "INEE":  [ "./tmp/inee.log" ],
-    "INP":   [ "./tmp/inp.log" ],
-    "INS2I": [ "./tmp/ins2i.log" ],
-    "INSB":  [ "./tmp/insb.log" ],
-    "INSHS": [ "./tmp/inshs.log" ],
-    "INSIS": [ "./tmp/insis.log" ],
-    "INSMI": [ "./tmp/insmi.log" ],
-    "INSU":  [ "./tmp/insu.log" ]
+    "_IN2P3_": [ "./tmp/in2p3.log" ],
+    "_INC_":   [ "./tmp/inc.log" ],
+    "_INEE_":  [ "./tmp/inee.log" ],
+    "_INP_":   [ "./tmp/inp.log" ],
+    "_INS2I_": [ "./tmp/ins2i.log" ],
+    "_INSB_":  [ "./tmp/insb.log" ],
+    "_INSHS_": [ "./tmp/inshs.log" ],
+    "_INSIS_": [ "./tmp/insis.log" ],
+    "_INSMI_": [ "./tmp/insmi.log" ],
+    "_INSU_":  [ "./tmp/insu.log" ]
   },
   "server": {
     "host": "127.0.0.1",
