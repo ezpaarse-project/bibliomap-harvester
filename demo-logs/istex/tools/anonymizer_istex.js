@@ -2,10 +2,30 @@
 *  Tool to anonymize logs file
 *  It reads line by line the file and remove unwanted values
 *
-*/ 
+*/
+
+
 var fs = require('fs');
+var InputLogName;
+var OutputLogName;
+
+if(process.argv[2] != null){
+	InputLogName = process.argv[2];
+}else{
+	console.log('You need to pass in 1rst parameter, a valid path to the log file');
+	process.exit();
+}
+
+if(process.argv[3] != null){
+	OutputLogName = process.argv[3];
+}else{
+	console.log('You need to pass in 2nd parameter, a valid destination path to the anonimized log file');
+	process.exit();
+}
+
+
 var lineReader = require('readline').createInterface({
-  input: fs.createReadStream('../istex.old.log')
+  input: fs.createReadStream(InputLogName)
 });
 
 lineReader.on('line', function (line) {
@@ -14,8 +34,8 @@ lineReader.on('line', function (line) {
 	  var new_line = line;
 	  new_line = new_line.replace(match[2], "XXX");
     new_line = new_line.replace(match[3], "XXX");
-	  fs.appendFileSync('../istex.log', new_line+'\n');	
+	  fs.appendFileSync(OutputLogName, new_line+'\n');	
 	}else{
-	  fs.appendFileSync('../istex.log', line+'\n');	
+	  fs.appendFileSync(OutputLogName, line+'\n');	
 	}
 });
