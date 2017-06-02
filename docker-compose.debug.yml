@@ -16,6 +16,8 @@ services:
       DEBUG: ${DEBUG}
       BBH_ENRICHER_HOST: "bibliomap-enricher"
       BBH_ENRICHER_PORT: 27777
+      BBH_LOGSTREAMS: ${BBH_LOGSTREAMS}
+      BBH_LOG_FOLDER: ${BBH_LOG_FOLDER}
 
 
     tty: true         # to have nice debug(...) outputs

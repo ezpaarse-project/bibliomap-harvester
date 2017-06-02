@@ -1,8 +1,6 @@
 {
   "nodeName": "bibliomap",
-  "logStreams": {
-    "_ISTEX_": [ "./demo-logs/tmp/istex.log" ]
-  },
+  "logStreams": {},
   "server": {
     "host": "127.0.0.1",
     "port": 27777
