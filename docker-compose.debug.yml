@@ -14,8 +14,8 @@ services:
       no_proxy: ${no_proxy}
       NODE_ENV: "development"
       DEBUG: ${DEBUG}
-      BBH_ENRICHER_HOST: "bibliomap-enricher"
-      BBH_ENRICHER_PORT: 27777
+      BBH_ENRICHER_HOST: ${BBH_ENRICHER_HOST}
+      BBH_ENRICHER_PORT: ${BBH_ENRICHER_PORT}
       BBH_LOGSTREAMS: ${BBH_LOGSTREAMS}
       BBH_LOG_FOLDER: ${BBH_LOG_FOLDER}
 
