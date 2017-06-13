@@ -6,18 +6,18 @@
 
 
 var fs = require('fs');
-var InputLogName;
-var OutputLogName;
+var inputLogName;
+var outputLogName;
 
 if(process.argv[2] != null){
-	InputLogName = process.argv[2];
+	inputLogName = process.argv[2];
 }else{
 	console.log('You need to pass in 1rst parameter, a valid path to the log file');
 	process.exit();
 }
 
 if(process.argv[3] != null){
-	OutputLogName = process.argv[3];
+	outputLogName = process.argv[3];
 }else{
 	console.log('You need to pass in 2nd parameter, a valid destination path to the anonimized log file');
 	process.exit();
@@ -25,7 +25,7 @@ if(process.argv[3] != null){
 
 
 var lineReader = require('readline').createInterface({
-  input: fs.createReadStream(InputLogName)
+  input: fs.createReadStream(inputLogName)
 });
 
 lineReader.on('line', function (line) {
@@ -34,8 +34,8 @@ lineReader.on('line', function (line) {
 	  var new_line = line;
 	  new_line = new_line.replace(match[2], "XXX");
     new_line = new_line.replace(match[3], "XXX");
-	  fs.appendFileSync(OutputLogName, new_line+'\n');	
+	  fs.appendFileSync(outputLogName, new_line+'\n');	
 	}else{
-	  fs.appendFileSync(OutputLogName, line+'\n');	
+	  fs.appendFileSync(outputLogName, line+'\n');	
 	}
 });
