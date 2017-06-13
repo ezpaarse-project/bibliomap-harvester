@@ -8,8 +8,8 @@ if [ ! -f /usr/bin/parallel ]; then
   apt-get update && apt-get install -y parallel
 fi
 
-ls -1 demo-logs/*.log | parallel \
+ls -1 $BBH_LOG_FOLDER/*.log | parallel \
   --no-notice \
-  -j $(ls -1 demo-logs/*.log | wc -l) \
+  -j $(ls -1 $BBH_LOG_FOLDER/*.log | wc -l) \
   --workdir $PWD \
   ./demo-logs-reader.sh {}

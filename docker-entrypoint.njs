@@ -2,6 +2,18 @@
 
 // override the config.json with ENV variables
 var config = require('./config.json');
+var configIstex = require('./config-istex.json');
+var configCnrs = require('./config-cnrs.json');
+
+switch(process.env.NODE_APP_INSTANCE){
+  case "istex":
+    config.logStreams = configIstex.logStreams;
+    break;
+  case "cnrs":
+    config.logStreams = configCnrs.logStreams;
+    break;
+}
+
 
 if (process.env.BBH_ENRICHER_HOST) {
   config.server.host = process.env.BBH_ENRICHER_HOST;
@@ -19,6 +31,8 @@ if (process.env.BBH_STREAMNAMES && process.env.BBH_STREAMPATHS) {
     config.logStreams[streamName] = [ bbhStreamPaths[idX] ];
   });
 }
+
+
 const fs = require('fs');
 fs.writeFileSync(__dirname + '/config.local.json', JSON.stringify(config, null, '  '));
 

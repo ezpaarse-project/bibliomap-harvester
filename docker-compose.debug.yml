@@ -14,11 +14,12 @@ services:
       no_proxy: ${no_proxy}
       NODE_ENV: "development"
       DEBUG: ${DEBUG}
-      BBH_NO_DEMO: ${BBH_NO_DEMO}
       BBH_ENRICHER_HOST: ${BBH_ENRICHER_HOST}
       BBH_ENRICHER_PORT: ${BBH_ENRICHER_PORT}
-      BBH_STREAMNAMES: ${BBH_STREAMNAMES}
-      BBH_STREAMPATHS: ${BBH_STREAMPATHS}
+      BBH_LOGSTREAMS: ${BBH_LOGSTREAMS}
+      BBH_LOG_FOLDER: ${BBH_LOG_FOLDER}
+
+
     tty: true         # to have nice debug(...) outputs
     stdin_open: true  # to be able to use CTRL+C to stop the debug
     entrypoint: ./docker-entrypoint.njs
