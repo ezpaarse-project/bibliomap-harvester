@@ -5,20 +5,14 @@ var config = require('./config.json');
 var configIstex = require('./config-istex.json');
 var configCnrs = require('./config-cnrs.json');
 
-  
-
- 
-
-  switch(process.env.NODE_APP_INSTANCE){
+switch(process.env.NODE_APP_INSTANCE){
   case "istex":
     config.logStreams = configIstex.logStreams;
     break;
   case "cnrs":
     config.logStreams = configCnrs.logStreams;
     break;
-  }
-
-
+}
 
 
 if (process.env.BBH_ENRICHER_HOST) {
