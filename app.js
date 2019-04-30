@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const config = require('./config.json');
 
 process.title = 'bibliomap-harvester';
 
@@ -28,13 +27,15 @@ if (process.env.DEBUG) {
 
 async function start () {
   let logFiles = null;
-  try {
-    logFiles = await listLogFiles();
-  } catch (err) {
-    if (process.env.DEBUG) {
-      console.error(err);
+  if (!process.env.BBH_NO_DEMO) {
+    try {
+      logFiles = await listLogFiles();
+    } catch (err) {
+      if (process.env.DEBUG) {
+        console.error(err);
+      }
+      return process.exit(1);
     }
-    return process.exit(1);
   }
   return logFiles;
 }
