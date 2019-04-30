@@ -44,7 +44,7 @@ function listLogFiles () {
   return new Promise((resolve, reject) => {
     fs.readdir(path.resolve(`${__dirname}/demo-logs/${process.env.NODE_APP_INSTANCE}`), (err, files) => {
       if (err) {
-        return reject(e);
+        return reject(err);
       }
   
       for (let i = 0; i < files.length; i++) {
