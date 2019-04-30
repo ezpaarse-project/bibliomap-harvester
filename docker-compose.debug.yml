@@ -4,7 +4,7 @@ services:
 
   bibliomap-harvester:
     container_name: bibliomap-harvester
-    image: node:6.9.1
+    image: node:10.15
     volumes:
       - .:/app
     working_dir: /app
@@ -18,6 +18,7 @@ services:
       BBH_ENRICHER_PORT: ${BBH_ENRICHER_PORT}
       BBH_LOGSTREAMS: ${BBH_LOGSTREAMS}
       BBH_LOG_FOLDER: ${BBH_LOG_FOLDER}
+      BBH_DEMO_DELAY: ${BBH_DEMO_DELAY}
 
 
     tty: true         # to have nice debug(...) outputs
