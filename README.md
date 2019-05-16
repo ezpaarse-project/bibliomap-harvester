@@ -20,7 +20,6 @@ As a standalone script, bibliomap-harvester is not very usefull. Please have a l
 
 Env variable can be used to customize it:
 
-  * BBH_NO_DEMO
   * BBH_ENRICHER_HOST
   * BBH_ENRICHER_PORT
   * BBH_STREAMNAMES
@@ -38,7 +37,6 @@ To connect external log files, you have to mount docker volumes this way.
   * Then when running bibliomap-harvester container, you have to setup theses variables:
     * BBH_STREAMNAMES="INC INSB"
     * BBH_STREAMPATHS="/app/tmp/inc.log /app/tmp/insb.log"
-    * BBH_NO_DEMO="1"
 
 ## Developement
 

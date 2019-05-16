@@ -18,9 +18,7 @@ services:
       BBH_ENRICHER_PORT: ${BBH_ENRICHER_PORT}
       BBH_LOGSTREAMS: ${BBH_LOGSTREAMS}
       BBH_LOG_FOLDER: ${BBH_LOG_FOLDER}
-      BBH_DEMO_DELAY: ${BBH_DEMO_DELAY}
-
-
+      BBH_LOGS_PER_SECOND: ${BBH_LOGS_PER_SECOND}
     tty: true         # to have nice debug(...) outputs
     stdin_open: true  # to be able to use CTRL+C to stop the debug
-    entrypoint: ./docker-entrypoint.njs
+    command: npm run start-demo

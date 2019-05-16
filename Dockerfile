@@ -24,4 +24,4 @@ RUN echo '{ \
 }' > /etc/ezmaster.json
 
 # run the application
-ENTRYPOINT [ "./docker-entrypoint.njs" ]
+CMD [ "npm", "start" ]
