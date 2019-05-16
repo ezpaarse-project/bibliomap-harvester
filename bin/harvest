@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const winston = require('winston');
+const LogHarvester = require('../lib/harvester.js');
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.simple(),
+  transports: [
+    new winston.transports.Console({ format: winston.format.simple() })
+  ]
+});
+
+let config = {
+  logging: logger
+};
+
+try {
+  config = Object.assign(config, require('../config.json'));
+  config = Object.assign(config, require('../config.local.json'));
+} catch (err) {
+  if (err.code === 'MODULE_NOT_FOUND') {
+    logger.warn('config.json OR config.local.json seems to be missing');
+  } else {
+	  logger.error(err.message);
+  }
+}
+
+const harvester = new LogHarvester(config);
+harvester.run();
