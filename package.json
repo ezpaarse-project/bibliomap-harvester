@@ -2,13 +2,12 @@
   "name": "bibliomap-harvester",
   "version": "3.0.0",
   "description": "Monitors and harvests ezproxy log files for bibliomap visualization.",
-  "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "npm run log.io-harvester",
-    "start-demo": "npm-run-all --parallel demo-logs-injector log.io-harvester",
-    "log.io-harvester": "HOME=$(pwd) ./node_modules/.bin/log.io-harvester",
-    "demo-logs-injector": "./demo-logs-injector.sh",
+    "start": "harvest",
+    "start-demo": "npm-run-all --parallel generate harvest",
+    "generate": "bin/generate",
+    "harvest": "bin/harvest",
     "insertversion": "sed -i \"s#\\(image: ezpaarseproject/bibliomap-harvester:\\)\\([\\.a-z0-9]\\+\\)#\\1${npm_package_version}#g\" docker-compose.yml",
     "version": "npm run insertversion && git add docker-compose.yml",
     "postversion": "git push && git push --tags"
@@ -21,8 +20,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "log.io": "^0.3.4",
-    "npm-run-all": "^3.1.2"
+    "npm-run-all": "^3.1.2",
+    "winston": "^3.2.1"
   },
   "devDependencies": {}
 }
