@@ -1,8 +1,6 @@
-FROM node:10.15
+FROM node:10.15.3
 
-# install yarn (faster than npm...)
 RUN npm config set strict-ssl false
-RUN apt-get update && apt-get install -y apt-transport-https
 
 # install npm dependencies
 WORKDIR /app
