@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y apt-transport-https
 # install npm dependencies
 WORKDIR /app
 COPY ./package.json /app/package.json
-RUN npm install && npm cache clear
+RUN npm install && npm cache clear --force
 
 # copy the code source
 # after dependencies installation
