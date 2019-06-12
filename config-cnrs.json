@@ -1,14 +1,14 @@
 {
   "logStreams": {
-    "_IN2P3_": [ "./demo-logs/tmp/in2p3.log" ],
-    "_INC_":   [ "./demo-logs/tmp/inc.log" ],
-    "_INEE_":  [ "./demo-logs/tmp/inee.log" ],
-    "_INP_":   [ "./demo-logs/tmp/inp.log" ],
-    "_INS2I_": [ "./demo-logs/tmp/ins2i.log" ],
-    "_INSB_":  [ "./demo-logs/tmp/insb.log" ],
-    "_INSHS_": [ "./demo-logs/tmp/inshs.log" ],
-    "_INSIS_": [ "./demo-logs/tmp/insis.log" ],
-    "_INSMI_": [ "./demo-logs/tmp/insmi.log" ],
-    "_INSU_":  [ "./demo-logs/tmp/insu.log" ]
+    "IN2P3": [ "./demo-logs/tmp/in2p3.log" ],
+    "INC":   [ "./demo-logs/tmp/inc.log" ],
+    "INEE":  [ "./demo-logs/tmp/inee.log" ],
+    "INP":   [ "./demo-logs/tmp/inp.log" ],
+    "INS2I": [ "./demo-logs/tmp/ins2i.log" ],
+    "INSB":  [ "./demo-logs/tmp/insb.log" ],
+    "INSHS": [ "./demo-logs/tmp/inshs.log" ],
+    "INSIS": [ "./demo-logs/tmp/insis.log" ],
+    "INSMI": [ "./demo-logs/tmp/insmi.log" ],
+    "INSU":  [ "./demo-logs/tmp/insu.log" ]
   }
 }
