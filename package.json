@@ -1,6 +1,6 @@
 {
   "name": "bibliomap-harvester",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Monitors and harvests ezproxy log files for bibliomap visualization.",
   "private": true,
   "scripts": {
