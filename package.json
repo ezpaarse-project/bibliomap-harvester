@@ -4,7 +4,7 @@
   "description": "Monitors and harvests ezproxy log files for bibliomap visualization.",
   "private": true,
   "scripts": {
-    "start": "harvest",
+    "start": "bin/harvest",
     "start-demo": "npm-run-all --parallel generate harvest",
     "generate": "bin/generate",
     "harvest": "bin/harvest",
